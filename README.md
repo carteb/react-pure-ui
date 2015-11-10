@@ -1,6 +1,4 @@
-# Pure UI
-
-http://rauchg.com/2015/pure-ui/
+# React Pure UI
 
 ## License
 

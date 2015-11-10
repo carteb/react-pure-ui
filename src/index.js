@@ -1,5 +1,13 @@
-import Wrapper from './components/Wrapper';
+import playground from './components/playground';
+import IntegerControl from './components/IntegerControl';
+import BooleanControl from './components/BooleanControl';
+import AvatarControl from './components/AvatarControl';
+import cloneControlProps from './utils/cloneControlProps';
 
 module.exports = {
-  Wrapper: Wrapper,
+  playground,
+  BooleanControl,
+  IntegerControl,
+  AvatarControl,
+  cloneControlProps,
 };
