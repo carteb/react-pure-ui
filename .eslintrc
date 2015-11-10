@@ -1,0 +1,35 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": 0,
+    "react/sort-comp": [2, {         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+      "order": [
+        "constructor",
+        "displayName",
+        "propTypes",
+        "contextTypes",
+        "childContextTypes",
+        "mixins",
+        "statics",
+        "defaultProps",
+        "getDefaultProps",
+        "state",
+        "getInitialState",
+        "getChildContext",
+        "componentWillMount",
+        "componentDidMount",
+        "componentWillReceiveProps",
+        "shouldComponentUpdate",
+        "componentWillUpdate",
+        "componentDidUpdate",
+        "componentWillUnmount",
+        "/^_on.+$/",
+        "/^_get.+$/",
+        "/^_trigger.+$/",
+        "/^_.+$/",
+        "/^_render.+$/",
+        "render"
+      ]
+    }]
+  }
+}
