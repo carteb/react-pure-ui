@@ -7,14 +7,12 @@ import {stub} from 'sinon';
 import React from 'react';
 
 describe('BooleanControl', () => {
-
   it('should render the label', () => {
     const result = shallow(<BooleanControl label="Age" />);
     expect(result.contains('Age')).to.be.true;
   });
 
   describe('randomValue', () => {
-
     beforeEach(() => {
       stub(Math, 'random').returns(0.5);
     });

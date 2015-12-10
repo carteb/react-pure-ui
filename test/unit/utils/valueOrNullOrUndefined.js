@@ -1,11 +1,8 @@
-import React from 'react';
 import {expect} from 'chai';
 import {stub} from 'sinon';
-import TestControl from '../../TestControl';
 import valueOrNullOrUndefined from '../../../src/utils/valueOrNullOrUndefined';
 
 describe('valueOrNullOrUndefined', () => {
-
   afterEach(() => {
     Math.random.restore();
   });

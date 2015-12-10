@@ -7,14 +7,12 @@ import React from 'react';
 import {stub} from 'sinon';
 
 describe('IntegerControl', () => {
-
   it('should render the label', () => {
     const result = shallow(<IntegerControl label="Age" />);
     expect(result.contains('Age')).to.be.true;
   });
 
   describe('randomValue', () => {
-
     beforeEach(() => {
       stub(Math, 'random').returns(0.6);
     });

@@ -8,7 +8,6 @@ import {spy} from 'sinon';
 import TestControl from '../../../TestControl';
 import renderControls from '../../../../src/components/playground/renderControls';
 
-
 describe('renderControls', () => {
   it('should render a control', () => {
     const properties = {
