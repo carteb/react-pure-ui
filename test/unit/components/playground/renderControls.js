@@ -5,8 +5,9 @@ import {expect} from 'chai';
 import {fromJS} from 'immutable';
 import {describeWithDOM, mount, shallow} from 'reagent';
 import {spy} from 'sinon';
-import TestControl from '../../TestControl';
-import renderControls from '../../../src/components/playground/renderControls';
+import TestControl from '../../../TestControl';
+import renderControls from '../../../../src/components/playground/renderControls';
+
 
 describe('renderControls', () => {
   it('should render a control', () => {

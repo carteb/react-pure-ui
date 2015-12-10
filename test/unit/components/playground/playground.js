@@ -4,8 +4,8 @@ import {expect} from 'chai';
 import {shallow} from 'reagent';
 import React from 'react';
 import {stub} from 'sinon';
-import TestControl from '../../TestControl';
-import playground from '../../../src/components/playground';
+import TestControl from '../../../TestControl';
+import playground from '../../../../src/components/playground';
 
 describe('playground', () => {
   let component;

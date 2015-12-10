@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from 'chai';
-import TestControl from '../TestControl';
-import cloneControlProps from '../../src/utils/cloneControlProps';
+import TestControl from '../../TestControl';
+import cloneControlProps from '../../../src/utils/cloneControlProps';
 
 describe('cloneControlProps', () => {
   it('should clone control properties and overwrite based on the new properties', () => {
