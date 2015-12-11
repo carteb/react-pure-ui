@@ -2,7 +2,7 @@
 
 import {expect} from 'chai';
 import BooleanControl from '../../../src/components/BooleanControl';
-import {shallow} from 'reagent';
+import {shallow} from 'enzyme';
 import {stub} from 'sinon';
 import React from 'react';
 

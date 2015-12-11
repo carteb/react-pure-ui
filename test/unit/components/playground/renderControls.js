@@ -3,7 +3,7 @@
 import React from 'react';
 import {expect} from 'chai';
 import {fromJS} from 'immutable';
-import {describeWithDOM, mount, shallow} from 'reagent';
+import {describeWithDOM, mount, shallow} from 'enzyme';
 import {spy} from 'sinon';
 import TestControl from '../../../TestControl';
 import renderControls from '../../../../src/components/playground/renderControls';

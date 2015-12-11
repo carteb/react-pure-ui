@@ -2,7 +2,7 @@
 
 import {expect} from 'chai';
 import IntegerControl from '../../../src/components/IntegerControl';
-import {shallow} from 'reagent';
+import {shallow} from 'enzyme';
 import React from 'react';
 import {stub} from 'sinon';
 

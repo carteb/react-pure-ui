@@ -1,7 +1,7 @@
 /* eslint no-unused-expressions: 0 */
 
 import {expect} from 'chai';
-import {shallow} from 'reagent';
+import {shallow} from 'enzyme';
 import React from 'react';
 import {stub} from 'sinon';
 import TestControl from '../../../TestControl';
