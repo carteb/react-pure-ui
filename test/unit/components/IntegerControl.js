@@ -1,9 +1,10 @@
 /* eslint no-unused-expressions: 0 */
 
 import {expect} from 'chai';
-import IntegerControl from '../../src/components/IntegerControl';
-import {shallow} from 'reagent';
+import IntegerControl from '../../../src/components/IntegerControl';
+import {shallow} from 'enzyme';
 import React from 'react';
+import {stub} from 'sinon';
 
 describe('IntegerControl', () => {
   it('should render the label', () => {
@@ -12,6 +13,14 @@ describe('IntegerControl', () => {
   });
 
   describe('randomValue', () => {
+    beforeEach(() => {
+      stub(Math, 'random').returns(0.6);
+    });
+
+    afterEach(() => {
+      Math.random.restore();
+    });
+
     it('should return an integer', () => {
       expect(IntegerControl.randomValue({})).to.be.a('number');
     });

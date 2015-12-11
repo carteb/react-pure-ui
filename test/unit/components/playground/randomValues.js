@@ -4,7 +4,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {fromJS} from 'immutable';
 import {stub} from 'sinon';
-import randomValues from '../../../src/components/playground/randomValues';
+import randomValues from '../../../../src/components/playground/randomValues';
 
 describe('randomValues', () => {
   let TestControl;

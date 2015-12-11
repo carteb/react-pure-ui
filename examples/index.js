@@ -13,11 +13,11 @@ import {
 window.React = React;
 
 const controlProps = {
-  age: <IntegerControl step={2}/>,
-  avatar: <AvatarControl />,
-  isDangerous: <BooleanControl />,
+  age: <IntegerControl random={{step: 2, min:0, max:1000}}/>,
+  avatar: <AvatarControl/>,
+  isDangerous: <BooleanControl/>,
   skin: {
-    isSteel: <BooleanControl />,
+    isSteel: <BooleanControl/>,
   },
 };
 const GodzillaPlayground = playground(Godzilla, controlProps, 'Fuzz Testing');

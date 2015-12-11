@@ -2,5 +2,8 @@
   "extends": "airbnb",
   "env": {
       "mocha": true
+  },
+  "rules": {
+    "react/prop-types": 0
   }
 }
