@@ -1,6 +1,6 @@
 import React from 'react';
-import {withState} from 'recompose';
-import {fromJS} from 'immutable';
+import { withState } from 'recompose';
+import { fromJS } from 'immutable';
 import randomValues from './randomValues';
 import renderControls from './renderControls';
 import RandomButton from '../RandomButton';
@@ -12,7 +12,7 @@ import styles from './styles';
  */
 const playground = (Component, properties, title = 'Playground') => {
   const immutableProperties = fromJS(properties);
-  const Wrapper = ({componentProperties, setComponentProperties, props}) => {
+  const Wrapper = ({ componentProperties, setComponentProperties, props }) => {
     return (
       <div style={styles.wrapper}>
         <div style={styles.controls}>

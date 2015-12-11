@@ -1,9 +1,9 @@
 /* eslint no-unused-expressions: 0 */
 
 import React from 'react';
-import {expect} from 'chai';
-import {fromJS} from 'immutable';
-import {stub} from 'sinon';
+import { expect } from 'chai';
+import { fromJS } from 'immutable';
+import { stub } from 'sinon';
 import randomValues from '../../../../src/components/playground/randomValues';
 
 describe('randomValues', () => {
@@ -24,7 +24,7 @@ describe('randomValues', () => {
       age: <TestControl />,
     };
     const result = randomValues(fromJS(properties)).toJS();
-    expect(result).to.eql({age: 42});
+    expect(result).to.eql({ age: 42 });
     expect(randomValueStub).to.have.been.calledOnce;
   });
 
@@ -55,6 +55,6 @@ describe('randomValues', () => {
       age: <TestControl value={22} />,
     };
     const result = randomValues(fromJS(properties)).toJS();
-    expect(result).to.eql({age: 22});
+    expect(result).to.eql({ age: 22 });
   });
 });

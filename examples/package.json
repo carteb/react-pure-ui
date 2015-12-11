@@ -12,13 +12,15 @@
     "url": "http://github.com/pure-ui/react-pure-ui.git"
   },
   "dependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
     "react": "=0.14.3",
     "react-dom": "^0.14.3"
   },
   "devDependencies": {
     "babel-core": "^5.8.33",
     "babel-loader": "^5.3.3",
-    "eslint": "^1.10.2",
     "express": "^4.13.3",
     "node-libs-browser": "^0.5.3",
     "react-transform-catch-errors": "^1.0.0",

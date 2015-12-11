@@ -1,6 +1,6 @@
-import React, {cloneElement} from 'react';
-import {fromJS} from 'immutable';
-import {isElement} from 'react-addons-test-utils';
+import React, { cloneElement } from 'react';
+import { fromJS } from 'immutable';
+import { isElement } from 'react-addons-test-utils';
 import createFragment from 'react-addons-create-fragment';
 
 /*
@@ -21,7 +21,7 @@ const renderControls = (properties, componentProperties, setComponentProperties,
       const props = {
         label: key,
         value: componentProperties.getIn(newKeyPath),
-        onUpdate: ({value}) => updatePropertyValues(newKeyPath, value),
+        onUpdate: ({ value }) => updatePropertyValues(newKeyPath, value),
       };
       return cloneElement(ElementOrObject, props);
     }

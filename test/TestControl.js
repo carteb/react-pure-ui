@@ -1,12 +1,12 @@
 import React from 'react';
 
-const TestControl = ({value, onUpdate}) => {
+const TestControl = ({ value, onUpdate }) => {
   return (
     <div>
       Test control:
       <input type="text"
              value={value}
-             onChange={(event) => onUpdate({value: event.target.value})} />
+             onChange={(event) => onUpdate({ value: event.target.value })} />
     </div>
   );
 };

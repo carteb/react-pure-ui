@@ -1,6 +1,6 @@
-import {cloneElement} from 'react';
-import {fromJS} from 'immutable';
-import {isElement} from 'react-addons-test-utils';
+import { cloneElement } from 'react';
+import { fromJS } from 'immutable';
+import { isElement } from 'react-addons-test-utils';
 
 const cloneControlProperties = (controlProps, newProps) => {
   const newControls = fromJS(controlProps).map((immutableObject, key) => {

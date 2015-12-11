@@ -3,7 +3,7 @@ import RandomButton from '../RandomButton';
 import valueOrNullOrUndefined from '../../utils/valueOrNullOrUndefined';
 
 const IntegerControl = (props) => {
-  const {label, value, onUpdate} = props;
+  const { label, value, onUpdate } = props;
   return (
     <div>
       <label>
@@ -20,7 +20,7 @@ const IntegerControl = (props) => {
   );
 };
 
-IntegerControl.randomValue = ({random = {}}) => {
+IntegerControl.randomValue = ({ random = {} }) => {
   const {
     canBeNull = true,
     canBeUndefined = true,

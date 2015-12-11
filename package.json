@@ -56,6 +56,9 @@
   "license": "MIT",
   "dependencies": {
     "belle": "^2.0.2",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
     "faker": "^3.0.1",
     "immutable": "^3.7.5",
     "react": "^0.14.3",

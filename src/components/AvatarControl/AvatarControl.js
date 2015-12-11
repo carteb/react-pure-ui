@@ -1,18 +1,18 @@
 import React from 'react';
 import faker from 'faker';
-import {TextInput} from 'belle';
+import { TextInput } from 'belle';
 import RandomButton from '../RandomButton';
 import valueOrNullOrUndefined from '../../utils/valueOrNullOrUndefined';
 
 const AvatarControl = (props) => {
-  const {label, value, onUpdate} = props;
+  const { label, value, onUpdate } = props;
   return (
     <div>
       <label>
         {label}
-        <img src={value} style={{height: 50}}/>
+        <img src={value} style={{ height: 50 }}/>
         <TextInput value={value}
-                   onUpdate={(data) => onUpdate({value: data.value})} />
+                   onUpdate={(data) => onUpdate({ value: data.value })} />
         <RandomButton onClick={ () => onUpdate({ value: AvatarControl.randomValue(props) }) }/>
         {typeof value === 'undefined' ? 'undefined' : null}
         {value === null ? 'null' : null}
@@ -21,7 +21,7 @@ const AvatarControl = (props) => {
   );
 };
 
-AvatarControl.randomValue = ({random = {}}) => {
+AvatarControl.randomValue = ({ random = {} }) => {
   const {
     canBeNull = true,
     canBeUndefined = true,

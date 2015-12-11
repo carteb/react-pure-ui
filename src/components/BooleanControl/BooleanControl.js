@@ -1,10 +1,10 @@
 import React from 'react';
-import {Choice, Toggle} from 'belle';
+import { Choice, Toggle } from 'belle';
 import RandomButton from '../RandomButton';
 import valueOrNullOrUndefined from '../../utils/valueOrNullOrUndefined';
 
 const BooleanControl = (props) => {
-  const {label, value, onUpdate} = props;
+  const { label, value, onUpdate } = props;
   return (
     <div>
       <label>
@@ -25,7 +25,7 @@ const BooleanControl = (props) => {
   );
 };
 
-BooleanControl.randomValue = ({random = {}}) => {
+BooleanControl.randomValue = ({ random = {} }) => {
   const {
     canBeNull = true,
     canBeUndefined = true,

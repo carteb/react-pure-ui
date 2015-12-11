@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from 'chai';
+import { expect } from 'chai';
 import TestControl from '../../TestControl';
 import cloneControlProps from '../../../src/utils/cloneControlProps';
 
@@ -11,14 +11,14 @@ describe('cloneControlProps', () => {
       weight: <TestControl value={42} />,
     };
     const newProps = {
-      weight: {value: 103},
-      age: {value: 22},
+      weight: { value: 103 },
+      age: { value: 22 },
     };
 
     const result = cloneControlProps(properties, newProps);
-    expect(result.age.props).to.eqls({value: 22});
+    expect(result.age.props).to.eqls({ value: 22 });
     expect(result.size.props).to.eqls({});
-    expect(result.weight.props).to.eqls({value: 103});
+    expect(result.weight.props).to.eqls({ value: 103 });
   });
 
   it('should clone nexted control properties', () => {
@@ -31,14 +31,14 @@ describe('cloneControlProps', () => {
     };
     const newProps = {
       attributes: {
-        weight: {value: 103},
-        age: {value: 22},
+        weight: { value: 103 },
+        age: { value: 22 },
       },
     };
 
     const result = cloneControlProps(properties, newProps);
-    expect(result.attributes.age.props).to.eqls({value: 22});
+    expect(result.attributes.age.props).to.eqls({ value: 22 });
     expect(result.attributes.size.props).to.eqls({});
-    expect(result.attributes.weight.props).to.eqls({value: 103});
+    expect(result.attributes.weight.props).to.eqls({ value: 103 });
   });
 });

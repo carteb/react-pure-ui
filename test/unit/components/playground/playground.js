@@ -1,9 +1,9 @@
 /* eslint no-unused-expressions: 0 */
 
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
 import React from 'react';
-import {stub} from 'sinon';
+import { stub } from 'sinon';
 import TestControl from '../../../TestControl';
 import playground from '../../../../src/components/playground';
 
@@ -11,7 +11,7 @@ describe('playground', () => {
   let component;
 
   beforeEach(() => {
-    component = ({age}) => <p>{age}</p>;
+    component = ({ age }) => <p>{age}</p>;
   });
 
   it('should render the title', () => {

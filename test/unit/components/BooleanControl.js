@@ -1,9 +1,9 @@
 /* eslint no-unused-expressions: 0 */
 
-import {expect} from 'chai';
+import { expect } from 'chai';
 import BooleanControl from '../../../src/components/BooleanControl';
-import {shallow} from 'enzyme';
-import {stub} from 'sinon';
+import { shallow } from 'enzyme';
+import { stub } from 'sinon';
 import React from 'react';
 
 describe('BooleanControl', () => {

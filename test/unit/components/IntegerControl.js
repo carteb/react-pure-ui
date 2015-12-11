@@ -1,10 +1,10 @@
 /* eslint no-unused-expressions: 0 */
 
-import {expect} from 'chai';
+import { expect } from 'chai';
 import IntegerControl from '../../../src/components/IntegerControl';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
-import {stub} from 'sinon';
+import { stub } from 'sinon';
 
 describe('IntegerControl', () => {
   it('should render the label', () => {
