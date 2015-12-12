@@ -13,10 +13,10 @@ const AvatarControl = (props) => {
         <img src={value} style={{ height: 50 }}/>
         <TextInput value={value}
                    onUpdate={(data) => onUpdate({ value: data.value })} />
-        <RandomButton onClick={ () => onUpdate({ value: AvatarControl.randomValue(props) }) }/>
-        {typeof value === 'undefined' ? 'undefined' : null}
-        {value === null ? 'null' : null}
       </label>
+      <RandomButton onClick={ () => onUpdate({ value: AvatarControl.randomValue(props) }) }/>
+      {typeof value === 'undefined' ? 'undefined' : null}
+      {value === null ? 'null' : null}
     </div>
   );
 };
