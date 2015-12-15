@@ -13,6 +13,11 @@ import {
 // export for http://fb.me/react-devtools
 window.React = React;
 
+const teethControls = {
+  size: <IntegerControl random={{ min:5, max:10 }} />,
+  isSharp: <BooleanControl/>,
+};
+
 const controlProps = {
   age: <IntegerControl random={{ step: 2, min:0, max:1000 }}/>,
   avatar: <AvatarControl/>,
@@ -20,8 +25,9 @@ const controlProps = {
   skin: {
     isSteel: <BooleanControl/>,
   },
-  teethSize: <ArrayControl component={IntegerControl}
-                           componentRandom={{ min: 0, max: 22 }}/>,
+  teethSize: <ArrayControl control={IntegerControl}
+                           controlRandom={{ min: 0, max: 22 }} />,
+  teeth: <ArrayControl control={teethControls}/>,
 };
 const GodzillaPlayground = playground(Godzilla, controlProps, 'Fuzz Testing');
 
