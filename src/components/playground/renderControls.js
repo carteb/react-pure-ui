@@ -1,5 +1,4 @@
-import React, { cloneElement } from 'react';
-import { isElement } from 'react-addons-test-utils';
+import React, { cloneElement, isValidElement } from 'react';
 import createFragment from 'react-addons-create-fragment';
 import { mapValues, get, set } from 'lodash';
 
@@ -17,7 +16,7 @@ const renderControls = (properties, componentProperties, setComponentProperties,
     newKeyPath.push(key);
 
     // render control with props
-    if (isElement(ElementOrObject)) {
+    if (isValidElement(ElementOrObject)) {
       const props = {
         label: key,
         value: get(componentProperties, newKeyPath.join('.')),

@@ -1,11 +1,10 @@
-import { cloneElement } from 'react';
+import { cloneElement, isValidElement } from 'react';
 import { fromJS } from 'immutable';
-import { isElement } from 'react-addons-test-utils';
 
 const cloneControlProperties = (controlProps, newProps) => {
   const newControls = fromJS(controlProps).map((immutableObject, key) => {
     const ElementOrObject = immutableObject.toJS();
-    if (isElement(ElementOrObject)) {
+    if (isValidElement(ElementOrObject)) {
       return cloneElement(ElementOrObject, newProps[key]);
     }
 

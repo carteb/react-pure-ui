@@ -1,4 +1,4 @@
-import { isElement } from 'react-addons-test-utils';
+import { isValidElement } from 'react';
 import { mapValues } from 'lodash';
 
 /*
@@ -7,7 +7,7 @@ import { mapValues } from 'lodash';
  */
 const randomValues = (properties) => {
   return mapValues(properties, (ElementOrObject) => {
-    if (isElement(ElementOrObject)) {
+    if (isValidElement(ElementOrObject)) {
       if (typeof ElementOrObject.props.value !== 'undefined') {
         return ElementOrObject.props.value;
       }
