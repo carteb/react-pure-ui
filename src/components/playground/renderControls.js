@@ -1,26 +1,26 @@
 import React, { cloneElement } from 'react';
-import { fromJS } from 'immutable';
 import { isElement } from 'react-addons-test-utils';
 import createFragment from 'react-addons-create-fragment';
+import { mapValues, get, set } from 'lodash';
 
 /*
  * Returns a ReactFragment containing all rendered controls.
  */
-const renderControls = (properties, componentProperties, setComponentProperties, keyPath = fromJS([])) => {
+const renderControls = (properties, componentProperties, setComponentProperties, keyPath = []) => {
   const updatePropertyValues = (path, value) => {
-    const values = componentProperties.setIn(path.toJS(), value);
-    setComponentProperties(values.toJS());
+    const values = set(componentProperties, path.join('.'), value);
+    setComponentProperties(values);
   };
 
-  const controls = properties.map((immutableObject, key) => {
-    const newKeyPath = keyPath.push(key);
-    const ElementOrObject = immutableObject.toJS();
+  const controls = mapValues(properties, (ElementOrObject, key) => {
+    const newKeyPath = keyPath.slice();
+    newKeyPath.push(key);
 
     // render control with props
     if (isElement(ElementOrObject)) {
       const props = {
         label: key,
-        value: componentProperties.getIn(newKeyPath),
+        value: get(componentProperties, newKeyPath.join('.')),
         onUpdate: ({ value }) => updatePropertyValues(newKeyPath, value),
       };
       return cloneElement(ElementOrObject, props);
@@ -31,13 +31,13 @@ const renderControls = (properties, componentProperties, setComponentProperties,
       <div>
         <div style={{ height: 30 }}>{key}: {'{'}</div>
           <div style={{ paddingLeft: 10 }}>
-            {renderControls(immutableObject, componentProperties, setComponentProperties, newKeyPath)}
+            {renderControls(ElementOrObject, componentProperties, setComponentProperties, newKeyPath)}
           </div>
         <div>{'}'}</div>
       </div>
     );
   });
-  return createFragment(controls.toJS());
+  return createFragment(controls);
 };
 
 export default renderControls;

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { expect } from 'chai';
-import { fromJS } from 'immutable';
 import { stub } from 'sinon';
 import randomValues from '../../../../src/components/playground/randomValues';
 
@@ -23,7 +22,7 @@ describe('randomValues', () => {
     const properties = {
       age: <TestControl />,
     };
-    const result = randomValues(fromJS(properties)).toJS();
+    const result = randomValues(properties);
     expect(result).to.eql({ age: 42 });
     expect(randomValueStub).to.have.been.calledOnce;
   });
@@ -37,7 +36,7 @@ describe('randomValues', () => {
         mu: <TestControl />,
       },
     };
-    const result = randomValues(fromJS(fields)).toJS();
+    const result = randomValues(fields);
     const expected = {
       foo: {
         bar: {
@@ -54,7 +53,7 @@ describe('randomValues', () => {
     const properties = {
       age: <TestControl value={22} />,
     };
-    const result = randomValues(fromJS(properties)).toJS();
+    const result = randomValues(properties);
     expect(result).to.eql({ age: 22 });
   });
 });

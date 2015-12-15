@@ -17,10 +17,10 @@ const BooleanControl = (props) => {
           <Choice value>True</Choice>
           <Choice value={false}>False</Choice>
         </Toggle>
-        <RandomButton onClick={ () => onUpdate({ value: BooleanControl.randomValue(props) }) }/>
-        {typeof value === 'undefined' ? 'undefined' : null}
-        {value === null ? 'null' : null}
       </label>
+      <RandomButton onClick={ () => onUpdate({ value: BooleanControl.randomValue(props) }) }/>
+      {typeof value === 'undefined' ? 'undefined' : null}
+      {value === null ? 'null' : null}
     </div>
   );
 };
